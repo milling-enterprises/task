@@ -1,0 +1,11 @@
+<mat-drawer-container class="sidenav">
+  <mat-drawer #drawer mode="side">
+    <button mat-icon-button (click)="expandAccount()"><mat-icon>person_outline</mat-icon></button>
+  </mat-drawer>
+
+  <div>
+    <button mat-icon-button title="Open Nav"(click)="drawer.toggle()" *ngIf="!drawer.opened"><mat-icon>keyboard_double_arrow_right</mat-icon></button>
+    <button mat-icon-button title="Close Nav" (click)="drawer.toggle()" *ngIf="drawer.opened"><mat-icon>keyboard_double_arrow_left</mat-icon></button>
+  </div>
+
+</mat-drawer-container>
